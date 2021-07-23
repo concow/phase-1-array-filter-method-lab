@@ -7,11 +7,12 @@ function findMatching(drivers, name) {
 //     return drivers.filter(function (el) { 
 //         return el.toUpperCase() === name.toUpperCase; });
 // }
-
-function fuzzyMatch(drivers, name) {
-    return drivers.filter(el =>
-        el.toLowerCase().indexOf(name.toLowerCase()) === 0
-    )
+//check if element starts with specific letters
+function fuzzyMatch(drivers, letters) {
+    return drivers.filter(el => el.startsWith(letters))
+    // return drivers.filter(el =>
+    //     el.toLowerCase().indexOf(letters.toLowerCase()) === 0
+    // )
 }
 
 function matchName(drivers, name) {
